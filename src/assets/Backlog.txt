@@ -1,0 +1,5 @@
+- Configurar ambiente para JavaScript (react native): Tecnologia que vamos usar para implementação do trabalho prático.
+- Configurar Prettier
+- Definir e estudar arquitetura e sistematização das branch;
+- Realizar mock dos dados
+- Configurar todo backend de forma estática
