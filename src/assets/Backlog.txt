@@ -3,3 +3,5 @@
 - Definir e estudar arquitetura e sistematização das branch;
 - Realizar mock dos dados
 - Configurar todo backend de forma estática
+- Verificar compatibilidade do bootstrap
+- Criar logo e primeira página de login e encaminhamento
