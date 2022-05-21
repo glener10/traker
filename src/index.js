@@ -1,14 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import Login from './pages/Login';
 
-export default function App() {
+function App() {
 
   return (
-    <View>
-      <Text>
-        Testando Som
-      </Text>
-    </View>
+
+    <Login />
+
   );
 
 }
+
+export default App;

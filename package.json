@@ -15,6 +15,7 @@
     "axios": "^0.27.2",
     "json-server": "^0.17.0",
     "react": "17.0.2",
+    "react-bootstrap": "^2.4.0",
     "react-native": "0.68.2"
   },
   "devDependencies": {
