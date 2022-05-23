@@ -1,4 +1,4 @@
-import {useState, useCallback} from 'react';
+/*import {useState, useCallback} from 'react';
 import {UserService} from '../services/';
 import {useEffect} from 'react/cjs/react.production.min';
 
@@ -19,3 +19,4 @@ export const useUser = () => {
     getAllUsers,
   };
 };
+*/

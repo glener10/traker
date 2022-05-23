@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Text } from 'react-native';
+import api from '../../services/';
 
 
-const Login = () => {
+function Login() {
+
   return (
-    <Text>AAA</Text>
+    <Text>Eu sou o login</Text>
   );
 }
 

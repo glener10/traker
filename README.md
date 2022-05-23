@@ -2,6 +2,13 @@
 
 # Tutoriais
 
+Get do Json-Server
+
+http://localhost:3000/employees?nome=Glener
+
+Para debuggar e ver console
+http://localhost:8081/debugger-ui/
+
 Caso não dê para rodar scripts
 1- Entrar no powerShell como administrador
 2- Ir até a localidade do projeto
