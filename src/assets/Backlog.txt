@@ -1,0 +1,7 @@
+- Configurar ambiente para JavaScript (react native): Tecnologia que vamos usar para implementação do trabalho prático.
+- Configurar Prettier
+- Definir e estudar arquitetura e sistematização das branch;
+- Realizar mock dos dados  https://www.pluralsight.com/guides/react-mock-api
+- Configurar todo backend de forma estática
+- Verificar compatibilidade do bootstrap
+- Criar logo e primeira página de login e encaminhamento
