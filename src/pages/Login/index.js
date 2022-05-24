@@ -5,7 +5,6 @@ import api from '../../services/api';
 
 function Login() {
   const [users, setUsers] = useState([]);
-  const TESTANDOCONFLITO;
 
   useEffect(() => {
     async function getUsers() {
