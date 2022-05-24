@@ -5,7 +5,7 @@ import api from '../../services/api';
 
 function Login() {
   const [users, setUsers] = useState([]);
-  const FUNCIONOU;
+  const ABACATE;
 
   useEffect(() => {
     async function getUsers() {
