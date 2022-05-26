@@ -2,19 +2,15 @@
 
 # Backlog
 
-- Configurar ambiente para JavaScript (react native): Tecnologia que vamos usar para implementação do trabalho prático.
-
-- Configurar Prettier
-
-- Definir e estudar arquitetura e sistematização das branch;
-
-- Realizar mock dos dados https://www.pluralsight.com/guides/react-mock-api
-
-- Configurar todo backend de forma estática
-
-- Verificar compatibilidade do bootstrap
-
 - Criar logo e primeira página de login e encaminhamento
+
+- Conectar api com endpoint entre front-back end
+
+# Para Desenvolvedor ou contribuidor
+
+- Instalar e configurar ambiente react-native
+
+- Instalar e configurar Prettier
 
 # Tutoriais
 
@@ -39,7 +35,7 @@ Primeira coisa a fazer ao iniciar o projeto
 $ git clone...
 $ git checkout master   (ou release caso não seja versão final)
 $ git pull
-$ npm install --force
+$ npm install
 $ npm run server
-$ npx react-native run-android
+$ npm run app
 ```
