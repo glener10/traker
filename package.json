@@ -9,10 +9,13 @@
     "test": "jest",
     "lint": "eslint .",
     "server": "json-server --watch db.json",
-    "app": "npx react-native run-android"
+    "app": "npx react-native run-android",
+    "doctor": "npx react-native doctor"
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "js-cookie": "^3.0.1",
     "json-server": "^0.17.0",
     "react": "17.0.2",
     "react-bootstrap": "^2.4.0",

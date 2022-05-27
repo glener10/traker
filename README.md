@@ -1,5 +1,23 @@
 # mobileDevices
 
+# Backlog
+
+- Definir variável de banco (vai ser base para criar as telas)
+
+- Criar Logo
+
+- Definir todas as telas
+
+- Criar página de login e encaminhamento para próxima página (com tratamento de erro)
+
+- Conectar api com endpoint entre front-back end
+
+# Para Desenvolvedor ou contribuidor
+
+- Instalar e configurar ambiente react-native
+
+- Instalar e configurar Prettier
+
 # Tutoriais
 
 Get do Json-Server
@@ -23,7 +41,7 @@ Primeira coisa a fazer ao iniciar o projeto
 $ git clone...
 $ git checkout master   (ou release caso não seja versão final)
 $ git pull
-$ npm install --force
+$ npm install
 $ npm run server
-$ npx react-native run-android
+$ npm run app
 ```
