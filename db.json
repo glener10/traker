@@ -8,21 +8,17 @@
         {
           "codArea": "1"
         }
-        ]
+      ]
+    }
+  ],
+
+  "areas": [
+    {
+      "codArea": "1",
+      "nomeArea": "Barragem",
+      "statusSensor": "ativo",
+      "coordenateX": "1.25151515151",
+      "coordenateY": "2.34123123123"
     }
   ]
-  
-  
-  
-  
-  "areas": [
-  {
-    "codArea": "1",
-    "nomeArea": "Barragem"
-    "statusSensor": "ativo",
-    "coordenateX": "1.25151515151",
-    "coordenateY": "2.34123123123"
-  }
-  ]
-
 }
