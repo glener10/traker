@@ -1,20 +1,28 @@
 import React from 'react';
-import {ImageBackground, View, Text} from 'react-native';
+import {Container, Form, Button} from 'react-bootstrap';
+import {View, Image} from 'react-native';
 import {stylesLogin} from './loginStyle';
 
 function Login() {
   return (
     <View style={stylesLogin.container}>
-      <Text>Eu sou o login sasdad</Text>
-      <Text>Testando</Text>
-      <ImageBackground
-        source={{uri: 'https://github.com/igor-capeletti.png'}}
-        style={{
-          width: 200,
-          height: 200,
-          borderColor: 'black',
-        }}
-      />
+      <Container>
+        {<Image source={require('../../assets/logo_app.png')} />}
+      </Container>
+      <Form>
+        <Form.Group controlId="formBasicEmail">
+          <Form.Label>Usuário</Form.Label>
+          <Form.Control type="email" placeholder="" />
+        </Form.Group>
+
+        <Form.Group controlId="formBasicPassword">
+          <Form.Label>Senha</Form.Label>
+          <Form.Control type="password" placeholder="" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Logar
+        </Button>
+      </Form>
     </View>
   );
 }
