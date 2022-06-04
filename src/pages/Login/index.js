@@ -1,53 +1,67 @@
 import React from 'react';
-import {View, Image, Button, TextInput, useEffect} from 'react-native';
-import {stylesLogin} from './loginStyle';
+import { View, Image, Button, TextInput, Text } from 'react-native';
+import { stylesLogin } from './loginStyle';
+
+import * as Animatable from 'react-native-animatable'
 
 function Login() {
-  const [user, onChangeUser] = React.useState('');
-  const [password, onChangePassword] = React.useState('');
+  const [user, setUser] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-  React.useEffect(() => {
-    console.log(user);
-  }, [user]);
-
-  React.useEffect(() => {
-    console.log(password);
-  }, [password]);
-
-  function onChangeLogin() {
-    onChangeUser('Alterei o Login');
+  function authLogin() {
+    console.log("Login: " + user);
+    console.log("Senha: " + password);
   }
 
-  function onChangeSenha() {
-    onChangePassword('Alterei a senha');
-  }
 
   return (
     <View style={stylesLogin.container}>
-      <View>
+
+      <Animatable.View animation="fadeInLeft" delay={1000}>
         <Image
           source={require('../../assets/logo_app.png')}
           style={stylesLogin.logo}
         />
-      </View>
-      <View>
+      </Animatable.View>
+
+      <Animatable.View animation="fadeIn" delay={2000}>
+
+        <Text>Login</Text>
         <TextInput
           style={stylesLogin.input}
-          onChange={onChangeLogin}
           placeholder="Insira seu usuário"
+          value={user}
+          type="email"
+          onChangeText={input => setUser(input)}
         />
+
+        <Text>Senha</Text>
         <TextInput
           style={stylesLogin.input}
-          onChangeText={onChangeSenha}
           placeholder="Insira sua senha"
+          value={password}
+          type="password"
+          onChangeText={input => setPassword(input)}
+          secureTextEntry={true}
         />
+
+
         <Button
           title="Efetuar Login"
           color="#156AE9"
-          accessibilityLabel="Learn more about this purple button"
+          accessibilityLabel="Botão para efetuar o Login"
+          onPress={() => authLogin()}
         />
-      </View>
-    </View>
+        {
+        //TODO: Por enquanto sem registrar!
+        /* <Button
+          title="Registre-se"
+          color="#156AE9"
+          accessibilityLabel="Botão para efetuar o cadastro de nova conta"
+        /> */}
+
+      </Animatable.View>
+    </View >
   );
 }
 
