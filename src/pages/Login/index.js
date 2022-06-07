@@ -9,6 +9,12 @@ function Login() {
   const [password, setPassword] = React.useState("");
 
   function authLogin() {
+    /*Ideia para autenticação
+    - Hook: useAuth
+    - ter um estado 'logado' (importante ter um useEffect vazio para caso de re
+      carregar o componente ter que fazer login novamente, ex botão voltar na próx tela) com encaminhamento aqui no login por rota
+    - useAuth retorna verdadeiro ou não com o user e as áreas
+      */
     console.log("Login: " + user);
     console.log("Senha: " + password);
   }
