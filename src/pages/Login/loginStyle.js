@@ -1,5 +1,6 @@
-import {StyleSheet} from 'react-native';
-import {any} from 'react-native/Libraries/Text/TextNativeComponent';
+import { StyleSheet } from 'react-native';
+//TODO: Igor, está utilizando essa biblioteca?
+//import {any} from 'react-native/Libraries/Text/TextNativeComponent';
 
 export const stylesLogin = StyleSheet.create({
   container: {
