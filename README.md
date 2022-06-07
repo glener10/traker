@@ -1,5 +1,12 @@
 # mobileDevices
 
+//TODO: <https://www.youtube.com/watch?v=LjJFu6Y6MrU&ab_channel=WillDev> Fazer os route (logado ou não)
+//TODO: <https://www.youtube.com/watch?v=ErjWNvP6mko&ab_channel=FelipeRocha%E2%80%A2dicasparadevs>
+
+- 38:40 Json fake.
+- 1 hora e 10 Route
+- 1 hora e 30 Json
+
 # Para Desenvolvedor ou contribuidor
 
 - Instalar e configurar ambiente react-native

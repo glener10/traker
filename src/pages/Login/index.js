@@ -5,7 +5,6 @@ import { stylesLogin } from './loginStyle';
 import * as Animatable from 'react-native-animatable'
 
 function Login() {
-  //TODO: <https://www.youtube.com/watch?v=LjJFu6Y6MrU&ab_channel=WillDev> Fazer os route (logado ou não)
   const [user, setUser] = React.useState("");
   const [password, setPassword] = React.useState("");
 
