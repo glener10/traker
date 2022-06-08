@@ -3,11 +3,13 @@ import { View, Image, Button, TextInput, Text } from 'react-native';
 import { stylesLogin } from './loginStyle';
 import * as Animatable from 'react-native-animatable'
 import Areas from '../Areas';
+import useDb from '../../hooks/useDb';
 
 const Login = () => {
   const [user, setUser] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [logged, setLogged] = React.useState(false);
+  const db = useDb();
 
   React.useEffect(() => {
     setUser("");
@@ -23,6 +25,7 @@ const Login = () => {
       //TODO: Verificar se existe cliente com este user e senha
       //TODO: set state para useLogged e areas estaticamente
       //TODO: Fazer get do json server
+      console.log(db);
       setLogged(true);
     }
 
