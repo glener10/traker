@@ -16,12 +16,16 @@ const Login = () => {
   }, []);
 
   function authLogin() {
-    /*Ideia para autenticação
-    - Hook: useAuth
-    - useAuth retorna verdadeiro ou não com o user e as áreas
-      */
-    console.log("Login: " + user);
-    console.log("Senha: " + password);
+    if (!user || !password) {
+      alert("Por favor, insira os dados.");
+    }
+    else {
+      //TODO: Verificar se existe cliente com este user e senha
+      //TODO: set state para useLogged e areas estaticamente
+      //TODO: Fazer get do json server
+      setLogged(true);
+    }
+
   }
 
 
@@ -29,14 +33,14 @@ const Login = () => {
     <>
       {logged == false ?
         <View style={stylesLogin.container} >
-          <Animatable.View animation="fadeInLeft" delay={1000}>
+          <Animatable.View animation="fadeInLeft" delay={500}>
             <Image
               source={require('../../assets/logo_app.png')}
               style={stylesLogin.logo}
             />
           </Animatable.View>
 
-          <Animatable.View animation="fadeIn" delay={2000}>
+          <Animatable.View animation="fadeIn" delay={1000}>
 
             <Text>Login</Text>
             <TextInput
