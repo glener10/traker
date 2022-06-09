@@ -21,10 +21,9 @@ const Login = () => {
     if (!user || !password) {
       alert('Por favor, insira os dados.');
     } else {
+      //TODO: Criar state para user e areas que set
       //TODO: Verificar se existe cliente com este user e senha
       //TODO: set state para useLogged e areas estaticamente
-      //TODO: Fazer get do json server
-      console.log(db);
       setLogged(true);
     }
   }

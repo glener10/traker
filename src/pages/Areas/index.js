@@ -1,11 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
+import {Text} from 'react-native';
 
-const Areas = () => {
+const Areas = (areas, userLogged) => {
+  console.log(areas);
 
-  return (
-    <Text>Eu sou uma nova tela</Text>
-  );
-}
+  return <Text>Eu sou uma nova tela</Text>;
+};
 
 export default Areas;
