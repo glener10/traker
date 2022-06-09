@@ -1,41 +1,38 @@
 import React from 'react';
-import { View, Image, Button, TextInput, Text } from 'react-native';
-import { stylesLogin } from './loginStyle';
-import * as Animatable from 'react-native-animatable'
+import {View, Image, Button, TextInput, Text} from 'react-native';
+import {stylesLogin} from './loginStyle';
+import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
 
 const Login = () => {
-  const [user, setUser] = React.useState("");
-  const [password, setPassword] = React.useState("");
+  const [user, setUser] = React.useState('');
+  const [password, setPassword] = React.useState('');
   const [logged, setLogged] = React.useState(false);
   const db = useDb();
 
   React.useEffect(() => {
-    setUser("");
-    setPassword("");
+    setUser('');
+    setPassword('');
     setLogged(false);
   }, []);
 
   function authLogin() {
     if (!user || !password) {
-      alert("Por favor, insira os dados.");
-    }
-    else {
+      alert('Por favor, insira os dados.');
+    } else {
       //TODO: Verificar se existe cliente com este user e senha
       //TODO: set state para useLogged e areas estaticamente
       //TODO: Fazer get do json server
       console.log(db);
       setLogged(true);
     }
-
   }
-
 
   return (
     <>
-      {logged == false ?
-        <View style={stylesLogin.container} >
+      {logged == false ? (
+        <View style={stylesLogin.container}>
           <Animatable.View animation="fadeInLeft" delay={500}>
             <Image
               source={require('../../assets/logo_app.png')}
@@ -43,8 +40,10 @@ const Login = () => {
             />
           </Animatable.View>
 
-          <Animatable.View animation="fadeIn" delay={1000}>
-
+          <Animatable.View
+            style={stylesLogin.form}
+            animation="fadeIn"
+            delay={1000}>
             <Text>Login</Text>
             <TextInput
               style={stylesLogin.input}
@@ -63,8 +62,11 @@ const Login = () => {
               onChangeText={input => setPassword(input)}
               secureTextEntry={true}
             />
-
-
+          </Animatable.View>
+          <Animatable.View
+            style={stylesLogin.inputButton}
+            animation="fadeIn"
+            delay={1000}>
             <Button
               title="Efetuar Login"
               color="#156AE9"
@@ -72,21 +74,20 @@ const Login = () => {
               onPress={() => authLogin()}
             />
             {
-        //TODO: Por enquanto sem registrar!
-        /* <Button
+              //TODO: Por enquanto sem registrar!
+              /* <Button
           title="Registre-se"
           color="#156AE9"
           accessibilityLabel="Botão para efetuar o cadastro de nova conta"
-        /> */}
-
+            /> */
+            }
           </Animatable.View>
-        </View >
-
-        :
+        </View>
+      ) : (
         <Areas />
-      }
+      )}
     </>
   );
-}
+};
 
 export default Login;
