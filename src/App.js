@@ -3,11 +3,13 @@ import Login from './pages/Login';
 import { StyleSheet, View } from 'react-native';
 
 export default function App() {
+
+
   return (
     <>
-      <View style={styles.container}>
+      < View style={styles.container} >
         <Login style={styles.title} />
-      </View>
+      </ View >
     </>
   );
 }

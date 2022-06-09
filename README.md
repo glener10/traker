@@ -1,16 +1,12 @@
 # mobileDevices
 
-# Backlog
+//TODO: <https://www.youtube.com/watch?v=LjJFu6Y6MrU&ab_channel=WillDev> Fazer os route (logado ou não)
 
-- Definir variável de banco (vai ser base para criar as telas)
+//TODO: <https://www.youtube.com/watch?v=ErjWNvP6mko&ab_channel=FelipeRocha%E2%80%A2dicasparadevs>
 
-- Criar Logo
-
-- Definir todas as telas
-
-- Criar página de login e encaminhamento para próxima página (com tratamento de erro)
-
-- Conectar api com endpoint entre front-back end
+- 38:40 Json fake.
+- 1 hora e 10 Route
+- 1 hora e 30 Json
 
 # Para Desenvolvedor ou contribuidor
 
