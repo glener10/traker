@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, Button } from 'react-native';
+import NavBar from '../../components/NavigationBar';
 
 const Areas = (props) => {
 
@@ -10,6 +11,7 @@ const Areas = (props) => {
 
   return (
     <>
+      <NavBar />
       <Text>Eu sou uma nova tela</Text>
       <Button
         title="Gerar Log area e userLogged"
