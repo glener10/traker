@@ -24,16 +24,80 @@ const useDb = () => {
       {
         codArea: '1',
         nomeArea: 'Unipampa',
+        tamanho: '1.8',
+        largura: '120',
+        comprimento: '150',
+        culturaAtual: 'Soja',
         statusSensor: 'ativo',
         coordenateX: '-29.78952352049523',
         coordenateY: '-55.76859685519926',
+        img: 'end/lavoura1',
+        sensor: {
+          pragas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '1',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+          doencas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '2',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+        },
       },
+
+
       {
         codArea: '2',
-        nomeArea: 'Clube atletico 7 de Setembro',
-        statusSensor: 'desativado',
-        coordenateX: '-29.785412256064387',
-        coordenateY: '-55.77947971083362',
+        nomeArea: 'ASD',
+        tamanho: '1.8',
+        largura: '120',
+        comprimento: '150',
+        culturaAtual: 'Soja',
+        statusSensor: 'ativo',
+        coordenateX: '-29.78952352049523',
+        coordenateY: '-55.76859685519926',
+        img: 'end/lavoura1',
+        sensor: {
+          pragas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '1',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+          doencas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '2',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+        },
       },
     ],
   };
