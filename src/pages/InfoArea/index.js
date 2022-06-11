@@ -48,9 +48,11 @@ const Areas = () => {
       <View style={stylesInfoArea.container}>
         <Animatable.View animation="fadeInLeft" delay={500}>
           <Image
-            source={require('../../assets/logo_app.png')}
+            source={require('../../assets/lavoura1.jpg')}
             style={stylesInfoArea.imgArea}
           />
+          <Text style={stylesInfoArea.h1}>Pragas</Text>
+          <Text style={stylesInfoArea.h1}>Doenças</Text>
           <Text>{data.sensor.pragas[1].nome}</Text>
         </Animatable.View>
       </View>

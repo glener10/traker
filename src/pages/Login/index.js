@@ -22,16 +22,16 @@ const Login = () => {
   }, []);
 
   async function authLogin() {
-    if (!user || !password) {
-      alert('Por favor, insira os dados.');
-    } else {
-      //TODO: Criar state para user e areas que set
-      //TODO: Verificar se existe cliente com este user e senha
-      //TODO: set state para useLogged e areas estaticamente
-      setUserLogged(db.users[0]);
-      setAreas(db.areas);
-      setLogged(true);
-    }
+    //if (!user || !password) {
+    //alert('Por favor, insira os dados.');
+    //} else {
+    //TODO: Criar state para user e areas que set
+    //TODO: Verificar se existe cliente com este user e senha
+    //TODO: set state para useLogged e areas estaticamente
+    setUserLogged(db.users[0]);
+    setAreas(db.areas);
+    setLogged(true);
+    //}
   }
 
   return (
@@ -89,7 +89,7 @@ const Login = () => {
           </Animatable.View>
         </View>
       ) : (
-        <Areas props={{userLogged, areas}} />
+        <InfoArea props={{userLogged, areas}} />
       )}
     </>
   );
