@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Button, Text } from 'react-native';
-import { stylesInfoArea } from './infoAreaStyle';
+import {View, Image, Button, Text} from 'react-native';
+import {stylesInfoArea} from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
 
 const Areas = () => {

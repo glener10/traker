@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, Image, Button, TextInput, Text } from 'react-native';
-import { stylesLogin } from './loginStyle';
+import {View, Image, Button, TextInput, Text} from 'react-native';
+import {stylesLogin} from './loginStyle';
 import * as Animatable from 'react-native-animatable';
+import InfoArea from '../InfoArea';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
 
@@ -88,7 +89,7 @@ const Login = () => {
           </Animatable.View>
         </View>
       ) : (
-        <Areas props={{ userLogged, areas }} />
+        <Areas props={{userLogged, areas}} />
       )}
     </>
   );
