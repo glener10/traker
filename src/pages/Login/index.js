@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, Image, Button, TextInput, Text} from 'react-native';
-import {stylesLogin} from './loginStyle';
+import { View, Image, Button, TextInput, Text } from 'react-native';
+import { stylesLogin } from './loginStyle';
 import * as Animatable from 'react-native-animatable';
-import InfoArea from '../InfoArea';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
 
@@ -22,16 +21,16 @@ const Login = () => {
   }, []);
 
   async function authLogin() {
-    //if (!user || !password) {
-    //alert('Por favor, insira os dados.');
-    //} else {
-    //TODO: Criar state para user e areas que set
-    //TODO: Verificar se existe cliente com este user e senha
-    //TODO: set state para useLogged e areas estaticamente
-    setUserLogged(db.users[0]);
-    setAreas(db.areas);
-    setLogged(true);
-    //}
+    if (!user || !password) {
+      alert('Por favor, insira os dados.');
+    } else {
+      //TODO: Criar state para user e areas que set
+      //TODO: Verificar se existe cliente com este user e senha
+      //TODO: set state para useLogged e areas estaticamente
+      setUserLogged(db.users[0]);
+      setAreas(db.areas);
+      setLogged(true);
+    }
   }
 
   return (
@@ -89,7 +88,7 @@ const Login = () => {
           </Animatable.View>
         </View>
       ) : (
-        <InfoArea props={{userLogged, areas}} />
+        <Areas props={{ userLogged, areas }} />
       )}
     </>
   );
