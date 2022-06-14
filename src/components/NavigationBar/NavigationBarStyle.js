@@ -2,14 +2,18 @@ import { StyleSheet } from 'react-native';
 
 export const stylesNav = StyleSheet.create({
   up: {
-    backgroundColor: '#156AE9',
+    backgroundColor: '#23b5b5',
     width: '100%',
+    height: '6%',
+    top: '-85%',
+    flexDirection: 'row',
+    alignItems: 'center',
   },
   name: {
-    backgroundColor: 'yellow',
-    width: '100%',
+    color: 'white',
+    fontSize: 30,
   },
   icon: {
-    backgroundColor: 'red',
+    marginLeft: 250,
   },
 });

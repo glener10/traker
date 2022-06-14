@@ -20,16 +20,43 @@ const Login = () => {
     setLogged(false);
   }, []);
 
+  async function getUser() {
+    var control = false;
+    db.users.map((value, index) => {
+      if (value.username == user && value.password == password) {
+        setUserLogged(value);
+        control = true;
+      }
+    });
+    return control;
+  }
+
+  async function getAreas(arrayAreas) {
+    var control = false;
+    db.areas.map((value, index) => {
+      console.log(value);
+    });
+
+    return control;
+  }
+
   async function authLogin() {
     if (!user || !password) {
       alert('Por favor, insira os dados.');
     } else {
-      //TODO: Criar state para user e areas que set
-      //TODO: Verificar se existe cliente com este user e senha
-      //TODO: set state para useLogged e areas estaticamente
-      setUserLogged(db.users[0]);
-      setAreas(db.areas);
-      setLogged(true);
+      const control = await getUser();
+      if (control) {
+        //TODO: Falta fazer o get de areas
+        const controlAreas = await getAreas(userLogged.areas);
+        setAreas(db.areas);
+        setLogged(true);
+      }
+      else {
+        alert("Não foi encontrado nenhum usuário com estas informações")
+        setPassword('');
+        setUser('');
+      }
+
     }
   }
 
@@ -47,7 +74,7 @@ const Login = () => {
           <Animatable.View
             style={stylesLogin.form}
             animation="fadeIn"
-            delay={1000}>
+            delay={2500}>
             <Text>Login</Text>
             <TextInput
               style={stylesLogin.input}
@@ -70,10 +97,10 @@ const Login = () => {
           <Animatable.View
             style={stylesLogin.inputButton}
             animation="fadeIn"
-            delay={1000}>
+            delay={2500}>
             <Button
               title="Efetuar Login"
-              color="#156AE9"
+              color="#23b5b5"
               accessibilityLabel="Botão para efetuar o Login"
               onPress={async () => await authLogin()}
             />

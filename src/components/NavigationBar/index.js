@@ -1,16 +1,23 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { stylesNav } from './NavigationBarStyle';
+import Icon from 'react-native-vector-icons/AntDesign';
 
-const NavBar = () => {
+const NavBar = (props) => {
+
+  function execLogout() {
+    alert("Fazendo logout");
+  }
 
   return (
+
     <View style={stylesNav.up}>
-      <View style={stylesNav.name}>
-        <Text>ROI</Text>
-        <Text style={stylesNav.icon}>Aqui tem um ícone</Text>
-      </View>
+      <Text style={stylesNav.name}>{props.props.userLogged.username}</Text>
+      <TouchableOpacity onPress={execLogout}>
+        <Icon style={stylesNav.icon} name="logout" size={30} color='white' />
+      </TouchableOpacity>
     </View>
+
   );
 };
 

@@ -5,14 +5,14 @@ const useDb = () => {
   const db = {
     users: [
       {
-        username: 'Vinicius',
+        username: 'vinicius',
         password: '123456',
         codUser: '1',
         admin: false,
         areas: ['1', '2'],
       },
       {
-        username: 'Super Vinicius',
+        username: 'supervinicius',
         password: '123456',
         codUser: '2',
         admin: true,
