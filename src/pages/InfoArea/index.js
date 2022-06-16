@@ -52,7 +52,24 @@ const Areas = () => {
             style={stylesInfoArea.imgArea}
           />
           <Text style={stylesInfoArea.h1}>Pragas</Text>
+          <View style={stylesInfoArea.containerPragasDoencas}>
+            <View style={stylesInfoArea.containerPragasDoencasLeft}>
+              <Text style={stylesInfoArea.h1}>Praga 1</Text>
+            </View>
+            <View style={stylesInfoArea.containerPragasDoencasRight}>
+              <Text style={stylesInfoArea.h1}>Praga 2</Text>
+            </View>
+          </View>
+
           <Text style={stylesInfoArea.h1}>Doenças</Text>
+          <View style={stylesInfoArea.containerPragasDoencas}>
+            <View style={stylesInfoArea.containerPragasDoencasLeft}>
+              <Text style={stylesInfoArea.h1}>Doença 1</Text>
+            </View>
+            <View style={stylesInfoArea.containerPragasDoencasRight}>
+              <Text style={stylesInfoArea.h1}>Doença 2</Text>
+            </View>
+          </View>
           <Text>{data.sensor.pragas[1].nome}</Text>
         </Animatable.View>
       </View>
