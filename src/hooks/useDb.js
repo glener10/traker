@@ -18,6 +18,13 @@ const useDb = () => {
         admin: true,
         areas: [],
       },
+      {
+        username: 'a',
+        password: 'a',
+        codUser: '3',
+        admin: true,
+        areas: ['1', '2'],
+      },
     ],
 
     areas: [
@@ -59,7 +66,6 @@ const useDb = () => {
           ],
         },
       },
-
 
       {
         codArea: '2',

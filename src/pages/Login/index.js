@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Image, Button, TextInput, Text } from 'react-native';
-import { stylesLogin } from './loginStyle';
+import {View, Image, Button, TextInput, Text} from 'react-native';
+import {stylesLogin} from './loginStyle';
 import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
@@ -34,7 +34,7 @@ const Login = () => {
   async function getAreas(arrayAreas) {
     var control = false;
     db.areas.map((value, index) => {
-      console.log(value);
+      //console.log(value);
     });
 
     return control;
@@ -50,13 +50,11 @@ const Login = () => {
         const controlAreas = await getAreas(userLogged.areas);
         setAreas(db.areas);
         setLogged(true);
-      }
-      else {
-        alert("Não foi encontrado nenhum usuário com estas informações")
+      } else {
+        alert('Não foi encontrado nenhum usuário com estas informações');
         setPassword('');
         setUser('');
       }
-
     }
   }
 
@@ -115,7 +113,7 @@ const Login = () => {
           </Animatable.View>
         </View>
       ) : (
-        <Areas props={{ userLogged, areas }} />
+        <Areas props={{userLogged, areas}} />
       )}
     </>
   );

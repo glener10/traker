@@ -1,9 +1,10 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const stylesCardArea = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
+    margin: 20,
+    border: 10,
     width: '100%',
+    borderColor: 'red',
   },
-
 });

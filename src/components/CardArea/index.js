@@ -1,13 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
-import { stylesCardArea } from './CardAreaStyle';
+import {Text, View} from 'react-native';
+import {stylesCardArea} from './CardAreaStyle';
 
-const CardArea = () => {
+const CardArea = area => {
+  console.log(area);
 
   return (
-    <Text style={stylesCardArea.container}>AQUI MEU CARD DA AREA</Text>
+    <View style={stylesCardArea.container}>
+      <Text>{area.area.nomeArea}</Text>
+    </View>
   );
 };
-
 
 export default CardArea;
