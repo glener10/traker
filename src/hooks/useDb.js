@@ -105,6 +105,45 @@ const useDb = () => {
           ],
         },
       },
+
+      {
+        codArea: '3',
+        nomeArea: 'ASD',
+        tamanho: '1.8',
+        largura: '120',
+        comprimento: '150',
+        culturaAtual: 'Trigo',
+        statusSensor: 'ativo',
+        coordenateX: '-29.78952352049523',
+        coordenateY: '-55.76859685519926',
+        img: 'end/lavoura1',
+        sensor: {
+          pragas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '1',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+          doencas: [
+            {
+              nome: 'Antracnose',
+              alerta: '3',
+              dataDeteccao: '10/06/2022',
+            },
+            {
+              nome: 'Antracnose',
+              alerta: '2',
+              dataDeteccao: '10/06/2022',
+            },
+          ],
+        },
+      },
     ],
   };
 

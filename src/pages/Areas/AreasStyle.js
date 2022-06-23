@@ -1,11 +1,10 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
 export const stylesAreas = StyleSheet.create({
   container: {
     flex: 1,
-    top: 70,
-    position: 'absolute',
+    top: 20,
     width: '100%',
-    alignItems: 'center',
+    paddingTop: StatusBar.currentHeight,
   },
 });

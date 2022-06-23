@@ -4,7 +4,7 @@ import {stylesCardArea} from './CardAreaStyle';
 import {Avatar, Button, Card, Title, Paragraph} from 'react-native-paper';
 
 const CardArea = area => {
-  console.log(area);
+  console.log('\n', area);
 
   return (
     <Card style={stylesCardArea.container}>
