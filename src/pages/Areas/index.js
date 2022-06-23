@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import NavBar from '../../components/NavigationBar';
 import CardArea from '../../components/CardArea';
-import {View} from 'react-native';
 import {stylesAreas} from './AreasStyle';
 
 const Areas = props => {
@@ -9,11 +8,11 @@ const Areas = props => {
   return (
     <>
       <NavBar props={props.props} />
-      <View style={stylesAreas.containers}>
+      <Fragment style={stylesAreas.containers}>
         {props.props.areas.map(area => {
           return <CardArea area={area} />;
         })}
-      </View>
+      </Fragment>
     </>
   );
 };
