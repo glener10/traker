@@ -1,25 +1,29 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
-import { stylesNav } from './NavigationBarStyle';
+import {Text, View, TouchableOpacity} from 'react-native';
+import {stylesNav} from './NavigationBarStyle';
 import Icon from 'react-native-vector-icons/AntDesign';
+import {Avatar, Button, Card, Title, Paragraph} from 'react-native-paper';
 
-const NavBar = (props) => {
-
+const NavBar = props => {
   function execLogout() {
-    alert("Fazendo logout");
+    alert('Fazendo logout');
   }
 
   return (
-
     <View style={stylesNav.up}>
-      <Text style={stylesNav.name}>{props.props.userLogged.username}</Text>
+      <Card.Cover
+        style={stylesNav.imgPerfil}
+        source={require('../../assets/usuario.png')}
+      />
+      <Text style={stylesNav.name}>Minhas Áreas</Text>
       <TouchableOpacity onPress={execLogout}>
-        <Icon style={stylesNav.icon} name="logout" size={30} color='white' />
+        <Card.Cover
+          style={stylesNav.imgLogout}
+          source={require('../../assets/logout.png')}
+        />
       </TouchableOpacity>
     </View>
-
   );
 };
-
 
 export default NavBar;

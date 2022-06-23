@@ -8,7 +8,7 @@ const Areas = props => {
   return (
     <>
       <NavBar props={props.props} />
-      <Fragment style={stylesAreas.containers}>
+      <Fragment style={stylesAreas.container}>
         {props.props.areas.map(area => {
           return <CardArea area={area} />;
         })}
