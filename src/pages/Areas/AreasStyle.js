@@ -2,6 +2,10 @@ import {StyleSheet} from 'react-native';
 
 export const stylesAreas = StyleSheet.create({
   container: {
-    marginTop: 250,
+    flex: 1,
+    top: 70,
+    position: 'absolute',
+    width: '100%',
+    alignItems: 'center',
   },
 });

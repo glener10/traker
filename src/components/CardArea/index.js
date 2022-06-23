@@ -8,12 +8,11 @@ const CardArea = area => {
 
   return (
     <Card style={stylesCardArea.container}>
-      <Card.Title title="Card Title" subtitle="Card Subtitle" />
-      <Card.Cover source={require('../../assets/lavoura1.jpg')} />
-      <Card.Actions>
-        <Button>Cancel</Button>
-        <Button>Ok</Button>
-      </Card.Actions>
+      <Card.Title title="Nome Área" subtitle="Cultura Atual" />
+      <Card.Cover
+        style={stylesCardArea.imgArea}
+        source={require('../../assets/lavoura1.jpg')}
+      />
     </Card>
   );
 };

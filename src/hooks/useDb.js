@@ -73,7 +73,7 @@ const useDb = () => {
         tamanho: '1.8',
         largura: '120',
         comprimento: '150',
-        culturaAtual: 'Soja',
+        culturaAtual: 'Trigo',
         statusSensor: 'ativo',
         coordenateX: '-29.78952352049523',
         coordenateY: '-55.76859685519926',

@@ -7,9 +7,10 @@ export const stylesNav = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#23b5b5',
     width: '100%',
-    position: 'relative',
+    position: 'absolute',
     alignItems: 'center',
     alignContent: 'center',
+    maxHeight: 70,
   },
   imgPerfil: {
     flex: 1,
