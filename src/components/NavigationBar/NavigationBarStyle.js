@@ -33,10 +33,10 @@ export const stylesNav = StyleSheet.create({
   },
   imgLogout: {
     flex: 1,
-    maxHeight: 40,
-    maxWidth: 40,
+    maxHeight: 35,
+    maxWidth: 35,
     marginRight: 15,
     backgroundColor: '#23b5b5',
-    width: 40,
+    width: 35,
   },
 });
