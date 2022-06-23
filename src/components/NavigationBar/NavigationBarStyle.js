@@ -1,13 +1,15 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const stylesNav = StyleSheet.create({
   up: {
-    backgroundColor: '#23b5b5',
-    width: '100%',
-    height: '6%',
-    top: '-85%',
+    flex: 1,
+    top: 0,
     flexDirection: 'row',
-    alignItems: 'center',
+    backgroundColor: '#23b5b5',
+    height: 45,
+    width: '100%',
+    position: 'absolute',
+    justifyContent: 'space-between',
   },
   name: {
     color: 'white',

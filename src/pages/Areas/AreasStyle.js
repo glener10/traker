@@ -1,11 +1,15 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-export const stylesLogin = StyleSheet.create({
+export const stylesAreas = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    alignContent: 'center',
-    width: '100%',
+    //flex: 1,
+    //center: 0,
+    marginTop: '100%',
+    //flexDirection: 'row',
+    //backgroundColor: '#23b5b5',
+    //height: 45,
+    //width: '100%',
+    //position: 'absolute',
+    //justifyContent: 'space-between',
   },
 });
