@@ -1,9 +1,9 @@
 import React from 'react';
-import {View, Image, Button, Text} from 'react-native';
-import {stylesInfoArea} from './InfoAreaStyle';
+import { View, Image, Button, Text } from 'react-native';
+import { stylesInfoArea } from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
 
-const Areas = () => {
+const InfoArea = () => {
   const data = {
     codArea: '1',
     nomeArea: 'Unipampa',
@@ -77,4 +77,4 @@ const Areas = () => {
   );
 };
 
-export default Areas;
+export default InfoArea;

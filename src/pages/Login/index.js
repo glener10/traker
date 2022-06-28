@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Image, Button, TextInput, Text} from 'react-native';
-import {stylesLogin} from './loginStyle';
+import { View, Image, Button, TextInput, Text } from 'react-native';
+import { stylesLogin } from './loginStyle';
 import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
+import InfoArea from '../../pages/InfoArea'
 
 const Login = () => {
   const [user, setUser] = React.useState('');
@@ -14,10 +15,24 @@ const Login = () => {
   const [areas, setAreas] = React.useState([]);
   const [userLogged, setUserLogged] = React.useState([]);
 
+
+
+  function setViewInfoArea(viewInfoArea, action) {
+    return !viewInfoArea;
+  }
+
+  const [viewInfoArea, dispatch] = React.useReducer(setViewInfoArea, false);
+
+  function setViewInfo() {
+    //TODO: Areas.length
+    dispatch();
+  }
+
   React.useEffect(() => {
     setUser('');
     setPassword('');
     setLogged(false);
+    setViewInfoArea(false);
   }, []);
 
   async function getUser() {
@@ -51,7 +66,7 @@ const Login = () => {
         setAreas(db.areas);
         setLogged(true);
       } else {
-        alert('Não foi encontrado nenhum usuário com estas informações');
+        alert('As credenciais estão incorretas, por favor insira novamente.');
         setPassword('');
         setUser('');
       }
@@ -112,9 +127,11 @@ const Login = () => {
             }
           </Animatable.View>
         </View>
-      ) : (
-        <Areas props={{userLogged, areas}} />
-      )}
+      ) :
+        viewInfoArea ? <InfoArea /> :
+          (
+            <Areas props={{ userLogged, areas, setViewInfo }} />
+          )}
     </>
   );
 };
