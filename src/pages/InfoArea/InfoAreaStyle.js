@@ -15,28 +15,8 @@ export const stylesInfoArea = StyleSheet.create({
     height: 300,
     //resizeMode: 'contain',
   },
-  h1: {
-    position: 'relative',
-    textAlign: 'center',
-    fontSize: 20,
-    fontFamily: 'Roboto',
-    top: 0,
-    width: '100%',
-    marginTop: 10,
-    //resizeMode: 'contain',
-  },
-  containerPragasDoencas: {
-    flex: 2,
-    flexDirection: 'row',
-  },
-  containerPragasDoencasLeft: {
-    //position: 'relative',
-    width: '50%',
-    height: 100,
-  },
-  containerPragasDoencasRight: {
-    //position: 'relative',
-    width: '50%',
-    height: 200,
+  conteudo: {
+    fontSize: 100,
+    color: 'red',
   },
 });

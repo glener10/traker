@@ -1,79 +1,36 @@
-import React from 'react';
-import { View, Image, Button, Text } from 'react-native';
-import { stylesInfoArea } from './InfoAreaStyle';
+import React, {Fragment} from 'react';
+import {View, Image, Button, Text} from 'react-native';
+import {stylesInfoArea} from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
 
-const InfoArea = () => {
-  const data = {
-    codArea: '1',
-    nomeArea: 'Unipampa',
-    tamanho: '1.8',
-    largura: '120',
-    comprimento: '150',
-    culturaAtual: 'Soja',
-    statusSensor: 'ativo',
-    coordenateX: '-29.78952352049523',
-    coordenateY: '-55.76859685519926',
-    img: 'end/lavoura1',
-    sensor: {
-      pragas: [
-        {
-          nome: 'Antracnose',
-          alerta: '3',
-          dataDeteccao: '10/06/2022',
-        },
-        {
-          nome: 'Antracnose',
-          alerta: '1',
-          dataDeteccao: '10/06/2022',
-        },
-      ],
-      doencas: [
-        {
-          nome: 'Antracnose',
-          alerta: '3',
-          dataDeteccao: '10/06/2022',
-        },
-        {
-          nome: 'Antracnose',
-          alerta: '2',
-          dataDeteccao: '10/06/2022',
-        },
-      ],
-    },
-  };
+const InfoArea = props => {
+  console.log(props);
 
   return (
-    <>
-      <View style={stylesInfoArea.container}>
-        <Animatable.View animation="fadeInLeft" delay={500}>
-          <Image
-            source={require('../../assets/lavoura1.jpg')}
-            style={stylesInfoArea.imgArea}
-          />
-          <Text style={stylesInfoArea.h1}>Pragas</Text>
-          <View style={stylesInfoArea.containerPragasDoencas}>
-            <View style={stylesInfoArea.containerPragasDoencasLeft}>
-              <Text style={stylesInfoArea.h1}>Praga 1</Text>
-            </View>
-            <View style={stylesInfoArea.containerPragasDoencasRight}>
-              <Text style={stylesInfoArea.h1}>Praga 2</Text>
-            </View>
-          </View>
-
-          <Text style={stylesInfoArea.h1}>Doenças</Text>
-          <View style={stylesInfoArea.containerPragasDoencas}>
-            <View style={stylesInfoArea.containerPragasDoencasLeft}>
-              <Text style={stylesInfoArea.h1}>Doença 1</Text>
-            </View>
-            <View style={stylesInfoArea.containerPragasDoencasRight}>
-              <Text style={stylesInfoArea.h1}>Doença 2</Text>
-            </View>
-          </View>
-          <Text>{data.sensor.pragas[1].nome}</Text>
-        </Animatable.View>
-      </View>
-    </>
+    <Animatable.View
+      style={stylesInfoArea.container}
+      animation="fadeInLeft"
+      delay={500}>
+      <Image
+        source={require('../../assets/lavoura1.jpg')}
+        style={stylesInfoArea.imgArea}
+      />
+      <Text>Pragas</Text>
+      {props.props.area.sensor.pragas.map((praga, key) => {
+        <Button
+          title={praga.nome}
+          color="red"
+          accessibilityLabel="Botão para ir até as informações da área"
+          style={{
+            width: 100,
+            backgroundColor: 'red',
+            marginTop: 200,
+            color: 'white',
+          }}
+        />;
+      })}
+      <Text>{props.props.area.sensor.pragas[0].nome}</Text>
+    </Animatable.View>
   );
 };
 

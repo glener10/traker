@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Image, Button, TextInput, Text } from 'react-native';
-import { stylesLogin } from './loginStyle';
+import {View, Image, Button, TextInput, Text} from 'react-native';
+import {stylesLogin} from './loginStyle';
 import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
-import InfoArea from '../../pages/InfoArea'
+import InfoArea from '../../pages/InfoArea';
 
 const Login = () => {
   const [user, setUser] = React.useState('');
@@ -14,8 +14,6 @@ const Login = () => {
 
   const [areas, setAreas] = React.useState([]);
   const [userLogged, setUserLogged] = React.useState([]);
-
-
 
   function setViewInfoArea(viewInfoArea, action) {
     return !viewInfoArea;
@@ -127,11 +125,11 @@ const Login = () => {
             }
           </Animatable.View>
         </View>
-      ) :
-        viewInfoArea ? <InfoArea /> :
-          (
-            <Areas props={{ userLogged, areas, setViewInfo }} />
-          )}
+      ) : viewInfoArea ? (
+        <InfoArea props={{area: areas.length > 0 ? areas[0] : null}} />
+      ) : (
+        <Areas props={{userLogged, areas, setViewInfo}} />
+      )}
     </>
   );
 };

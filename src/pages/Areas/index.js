@@ -10,14 +10,20 @@ const Areas = props => {
   const functionViewInfo = props.props.setViewInfo;
   return (
     <>
-      {/* <Button
+      <Button
         title="Informações da Área"
         color="red"
         accessibilityLabel="Botão para ir até as informações da área"
-        style={{ width: 100, backgroundColor: 'red', marginTop: 100, color: 'white' }}
+        style={{
+          width: 100,
+          backgroundColor: 'red',
+          marginTop: 100,
+          color: 'white',
+        }}
         onPress={() => {
           props.props.setViewInfo();
-        }} /> */}
+        }}
+      />
       <NavBar props={props.props} />
       <SafeAreaView style={stylesAreas.container}>
         <ScrollView>
