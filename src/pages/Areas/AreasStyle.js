@@ -6,5 +6,6 @@ export const stylesAreas = StyleSheet.create({
     top: 20,
     width: '100%',
     paddingTop: StatusBar.currentHeight,
+    marginTop: 15,
   },
 });
