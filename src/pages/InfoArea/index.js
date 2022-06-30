@@ -18,18 +18,18 @@ const InfoArea = props => {
       <Text>Pragas</Text>
       {props.props.area.sensor.pragas.map((praga, key) => {
         <Button
-          title={praga.nome}
+          title="QQQ"
           color="red"
           accessibilityLabel="Botão para ir até as informações da área"
           style={{
             width: 100,
             backgroundColor: 'red',
             marginTop: 200,
-            color: 'white',
+            color: 'red',
           }}
         />;
       })}
-      <Text>{props.props.area.sensor.pragas[0].nome}</Text>
+      <Text>{props.props.area.sensor.pragas[1].nome}</Text>
     </Animatable.View>
   );
 };

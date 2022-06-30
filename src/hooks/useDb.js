@@ -42,12 +42,12 @@ const useDb = () => {
         sensor: {
           pragas: [
             {
-              nome: 'Antracnose',
+              nome: 'Besouro',
               alerta: '3',
               dataDeteccao: '10/06/2022',
             },
             {
-              nome: 'Antracnose',
+              nome: 'Borboleta',
               alerta: '1',
               dataDeteccao: '10/06/2022',
             },
@@ -59,7 +59,7 @@ const useDb = () => {
               dataDeteccao: '10/06/2022',
             },
             {
-              nome: 'Antracnose',
+              nome: 'Mancha Aureolada',
               alerta: '2',
               dataDeteccao: '10/06/2022',
             },
@@ -81,24 +81,24 @@ const useDb = () => {
         sensor: {
           pragas: [
             {
-              nome: 'Antracnose',
+              nome: 'Abelha',
               alerta: '3',
               dataDeteccao: '10/06/2022',
             },
             {
-              nome: 'Antracnose',
+              nome: 'Lagarta Enroladeira',
               alerta: '1',
               dataDeteccao: '10/06/2022',
             },
           ],
           doencas: [
             {
-              nome: 'Antracnose',
+              nome: 'Mancha de Septoria',
               alerta: '3',
               dataDeteccao: '10/06/2022',
             },
             {
-              nome: 'Antracnose',
+              nome: 'Mancha Bacteriana',
               alerta: '2',
               dataDeteccao: '10/06/2022',
             },
