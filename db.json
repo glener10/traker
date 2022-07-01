@@ -1,24 +1,97 @@
 {
   "users": [
     {
-      "username": "Fulano",
-      "password": "1234",
+      "username": "Vinicius",
+      "password": "123456",
       "codUser": "1",
-      "areas": [
-        {
-          "codArea": "1"
-        }
-      ]
+      "admin": false,
+      "areas": ["1", "2"]
+    },
+    {
+      "username": "Super Vinicius",
+      "password": "123456",
+      "codUser": "2",
+      "admin": true,
+      "areas": []
     }
   ],
 
   "areas": [
     {
       "codArea": "1",
-      "nomeArea": "Barragem",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
       "statusSensor": "ativo",
-      "coordenateX": "1.25151515151",
-      "coordenateY": "2.34123123123"
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Antracnose",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Antracnose",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "2",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Antracnose",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Antracnose",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
     }
   ]
 }

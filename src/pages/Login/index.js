@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Image, Button, TextInput, Text } from 'react-native';
-import { stylesLogin } from './loginStyle';
+import {View, Image, Button, TextInput, Text} from 'react-native';
+import {stylesLogin} from './loginStyle';
 import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
+import InfoArea from '../../pages/InfoArea';
 
 const Login = () => {
   const [user, setUser] = React.useState('');
@@ -14,22 +15,59 @@ const Login = () => {
   const [areas, setAreas] = React.useState([]);
   const [userLogged, setUserLogged] = React.useState([]);
 
+  function setViewInfoArea(viewInfoArea, action) {
+    return !viewInfoArea;
+  }
+
+  const [viewInfoArea, dispatch] = React.useReducer(setViewInfoArea, false);
+
+  function setViewInfo() {
+    //TODO: Areas.length
+    dispatch();
+  }
+
   React.useEffect(() => {
     setUser('');
     setPassword('');
     setLogged(false);
+    setViewInfoArea(false);
   }, []);
+
+  async function getUser() {
+    var control = false;
+    db.users.map((value, index) => {
+      if (value.username == user && value.password == password) {
+        setUserLogged(value);
+        control = true;
+      }
+    });
+    return control;
+  }
+
+  async function getAreas(arrayAreas) {
+    var control = false;
+    db.areas.map((value, index) => {
+      //console.log(value);
+    });
+
+    return control;
+  }
 
   async function authLogin() {
     if (!user || !password) {
       alert('Por favor, insira os dados.');
     } else {
-      //TODO: Criar state para user e areas que set
-      //TODO: Verificar se existe cliente com este user e senha
-      //TODO: set state para useLogged e areas estaticamente
-      setUserLogged(db.users[0]);
-      setAreas(db.areas);
-      setLogged(true);
+      const control = await getUser();
+      if (control) {
+        //TODO: Falta fazer o get de areas
+        const controlAreas = await getAreas(userLogged.areas);
+        setAreas(db.areas);
+        setLogged(true);
+      } else {
+        alert('As credenciais estão incorretas, por favor insira novamente.');
+        setPassword('');
+        setUser('');
+      }
     }
   }
 
@@ -47,7 +85,7 @@ const Login = () => {
           <Animatable.View
             style={stylesLogin.form}
             animation="fadeIn"
-            delay={1000}>
+            delay={2500}>
             <Text>Login</Text>
             <TextInput
               style={stylesLogin.input}
@@ -70,10 +108,10 @@ const Login = () => {
           <Animatable.View
             style={stylesLogin.inputButton}
             animation="fadeIn"
-            delay={1000}>
+            delay={2500}>
             <Button
               title="Efetuar Login"
-              color="#156AE9"
+              color="#23b5b5"
               accessibilityLabel="Botão para efetuar o Login"
               onPress={async () => await authLogin()}
             />
@@ -87,8 +125,10 @@ const Login = () => {
             }
           </Animatable.View>
         </View>
+      ) : viewInfoArea ? (
+        <InfoArea props={{area: areas.length > 0 ? areas[0] : null}} />
       ) : (
-        <Areas props={{ userLogged, areas }} />
+        <Areas props={{userLogged, areas, setViewInfo}} />
       )}
     </>
   );

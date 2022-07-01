@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
-export const stylesLogin = StyleSheet.create({
+export const stylesAreas = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    alignContent: 'center',
+    top: 20,
     width: '100%',
+    paddingTop: StatusBar.currentHeight,
+    marginTop: 15,
   },
 });
