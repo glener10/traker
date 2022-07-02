@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
-import {View, Image, Button, Text} from 'react-native';
+import {View, Image, Text, ScrollView} from 'react-native';
+import NavBar from '../../components/NavigationBar';
 import {stylesInfoArea} from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
 
@@ -11,25 +12,39 @@ const InfoArea = props => {
       style={stylesInfoArea.container}
       animation="fadeInLeft"
       delay={500}>
+      <NavBar props={props.props} />
       <Image
         source={require('../../assets/lavoura1.jpg')}
         style={stylesInfoArea.imgArea}
       />
-      <Text>Pragas</Text>
-      {props.props.area.sensor.pragas.map((praga, key) => {
-        <Button
-          title="QQQ"
-          color="red"
-          accessibilityLabel="Botão para ir até as informações da área"
-          style={{
-            width: 100,
-            backgroundColor: 'red',
-            marginTop: 200,
-            color: 'red',
-          }}
-        />;
-      })}
-      <Text>{props.props.area.sensor.pragas[1].nome}</Text>
+      <ScrollView>
+        <View style={stylesInfoArea.sensorContainer}>
+          <Text style={stylesInfoArea.h1}>Pragas</Text>
+          <View style={stylesInfoArea.scroll}>
+            {props.props.area.sensor.pragas.map((praga, key) => {
+              return (
+                <Text style={stylesInfoArea.conteudoScroll}>{praga.nome}</Text>
+              );
+            })}
+          </View>
+        </View>
+        <View style={stylesInfoArea.sensorContainer}>
+          <Text style={stylesInfoArea.h1}>Doenças</Text>
+          <View style={stylesInfoArea.scroll}>
+            {props.props.area.sensor.doencas.map((doenca, key) => {
+              return (
+                <Text style={stylesInfoArea.conteudoScroll}>{doenca.nome}</Text>
+              );
+            })}
+          </View>
+        </View>
+        <View style={stylesInfoArea.sensorContainer}>
+          <Text style={stylesInfoArea.h1}>Informações da área</Text>
+          <View style={stylesInfoArea.scroll}>
+            <Text>Abacaxi</Text>
+          </View>
+        </View>
+      </ScrollView>
     </Animatable.View>
   );
 };
