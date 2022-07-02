@@ -3,7 +3,7 @@ import {stylesCardArea} from './CardAreaStyle';
 import {Button, Card} from 'react-native-paper';
 
 const CardArea = props => {
-  console.log(props.props);
+  //console.log(props.props);
   return (
     <>
       <Card style={stylesCardArea.container}>
@@ -18,6 +18,7 @@ const CardArea = props => {
         <Button
           style={stylesCardArea.btn}
           accessibilityLabel="Botão para ir até as informações da área"
+          color="white"
           onPress={() => {
             console.log('Click');
             props.props.setViewInfo();

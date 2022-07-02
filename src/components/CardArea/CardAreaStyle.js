@@ -18,5 +18,6 @@ export const stylesCardArea = StyleSheet.create({
   btn: {
     width: '100%',
     backgroundColor: '#23b5b5',
+    fontStyle: 'red',
   },
 });
