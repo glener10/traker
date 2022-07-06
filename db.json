@@ -13,6 +13,13 @@
       "codUser": "2",
       "admin": true,
       "areas": []
+    },
+    {
+      "username": "a",
+      "password": "a",
+      "codUser": "3",
+      "admin": true,
+      "areas": ["1", "2"]
     }
   ],
 
@@ -57,7 +64,7 @@
     },
     {
       "codArea": "2",
-      "nomeArea": "Unipampa",
+      "nomeArea": "Unipampa2",
       "tamanho": "1.8",
       "largura": "120",
       "comprimento": "150",
