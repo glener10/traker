@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react';
-import { View, Image, Text, ScrollView } from 'react-native';
+import React, {Container} from 'react';
+import {View, Image, Text, ScrollView} from 'react-native';
 import NavBar from '../../components/NavigationBar';
-import { stylesInfoArea } from './InfoAreaStyle';
+import {stylesInfoArea} from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
 
 const InfoArea = props => {
-
   function LOGOUT() {
     props.props.comeBackAreas();
   }
@@ -14,7 +13,7 @@ const InfoArea = props => {
       style={stylesInfoArea.container}
       animation="fadeInLeft"
       delay={500}>
-      <NavBar props={{ props, LOGOUT, tipo: "INFO" }} />
+      <NavBar props={{props, LOGOUT, tipo: 'INFO'}} />
       <Image
         source={require('../../assets/lavoura1.jpg')}
         style={stylesInfoArea.imgArea}
@@ -43,7 +42,42 @@ const InfoArea = props => {
         <View style={stylesInfoArea.sensorContainer}>
           <Text style={stylesInfoArea.h1}>Informações da área</Text>
           <View style={stylesInfoArea.scroll}>
-            <Text>{props.props.area.nomeArea}</Text>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Nome da Área:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.nomeArea}
+              </Text>
+            </View>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Largura:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.largura}
+              </Text>
+            </View>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Comprimento:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.comprimento}
+              </Text>
+            </View>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Tamanho em Hectares:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.tamanho}
+              </Text>
+            </View>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Cultura Atual:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.culturaAtual}
+              </Text>
+            </View>
+            <View style={stylesInfoArea.conteudoScrollInfo}>
+              <Text style={stylesInfoArea.tittle}>Status do Sensor:</Text>
+              <Text style={stylesInfoArea.conteudoInfo}>
+                {props.props.area.statusSensor}
+              </Text>
+            </View>
           </View>
         </View>
       </ScrollView>
