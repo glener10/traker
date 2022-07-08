@@ -1,4 +1,4 @@
-import {StyleSheet, StatusBar} from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 
 export const stylesInfoArea = StyleSheet.create({
   container: {
@@ -67,4 +67,46 @@ export const stylesInfoArea = StyleSheet.create({
     alignContent: 'center',
     flexDirection: 'row',
   },
+  conteudoDoencasPragas: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 5,
+    borderRadius: 30,
+    borderColor: 'black',
+  },
+  conteudoDoencasPragasVerde: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'green',
+  },
+  conteudoDoencasPragasAmarelo: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'yellow',
+  },
+  conteudoDoencasPragasVermelho: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'red',
+  },
+
+
 });
