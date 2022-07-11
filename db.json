@@ -13,6 +13,13 @@
       "codUser": "2",
       "admin": true,
       "areas": []
+    },
+    {
+      "username": "a",
+      "password": "a",
+      "codUser": "3",
+      "admin": true,
+      "areas": ["1", "2"]
     }
   ],
 
@@ -36,19 +43,24 @@
             "dataDeteccao": "10/06/2022"
           },
           {
-            "nome": "Antracnose",
+            "nome": "Borboleta",
             "alerta": "1",
             "dataDeteccao": "10/06/2022"
           }
         ],
         "doencas": [
           {
-            "nome": "Antracnose",
+            "nome": "Dengue",
             "alerta": "3",
             "dataDeteccao": "10/06/2022"
           },
           {
-            "nome": "Antracnose",
+            "nome": "NomeQualquer",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Aegis",
             "alerta": "2",
             "dataDeteccao": "10/06/2022"
           }
@@ -57,7 +69,7 @@
     },
     {
       "codArea": "2",
-      "nomeArea": "Unipampa",
+      "nomeArea": "Unipampa2",
       "tamanho": "1.8",
       "largura": "120",
       "comprimento": "150",
@@ -74,19 +86,19 @@
             "dataDeteccao": "10/06/2022"
           },
           {
-            "nome": "Antracnose",
+            "nome": "Bobeira",
             "alerta": "1",
             "dataDeteccao": "10/06/2022"
           }
         ],
         "doencas": [
           {
-            "nome": "Antracnose",
+            "nome": "AEB-305",
             "alerta": "3",
             "dataDeteccao": "10/06/2022"
           },
           {
-            "nome": "Antracnose",
+            "nome": "${AquiTemUmNome}",
             "alerta": "2",
             "dataDeteccao": "10/06/2022"
           }

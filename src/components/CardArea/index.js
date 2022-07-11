@@ -1,9 +1,8 @@
 import * as React from 'react';
-import {stylesCardArea} from './CardAreaStyle';
-import {Button, Card} from 'react-native-paper';
+import { stylesCardArea } from './CardAreaStyle';
+import { Button, Card } from 'react-native-paper';
 
 const CardArea = props => {
-  //console.log(props.props);
   return (
     <>
       <Card style={stylesCardArea.container}>
@@ -20,8 +19,7 @@ const CardArea = props => {
           accessibilityLabel="Botão para ir até as informações da área"
           color="white"
           onPress={() => {
-            console.log('Click');
-            props.props.setViewInfo();
+            props.props.functionViewInfo(props.props.area);
           }}>
           Informações da Área
         </Button>

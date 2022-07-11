@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Image, Button, TextInput, Text} from 'react-native';
-import {stylesLogin} from './loginStyle';
+import { View, Image, Button, TextInput, Text } from 'react-native';
+import { stylesLogin } from './loginStyle';
 import * as Animatable from 'react-native-animatable';
 import Areas from '../Areas';
 import useDb from '../../hooks/useDb';
@@ -20,9 +20,27 @@ const Login = () => {
   }
 
   const [viewInfoArea, dispatch] = React.useReducer(setViewInfoArea, false);
+  const [areaInfo, setAreaInfo] = React.useState([]);
 
-  function setViewInfo() {
-    //TODO: Areas.length
+
+  function comeBackAreas() {
+    setAreaInfo([]);
+    dispatch();
+  }
+
+
+
+  function logout() {
+    setUser('');
+    setPassword('');
+    setLogged(false);
+    setAreas([]);
+    setUserLogged([]);
+    setAreaInfo([]);
+  }
+
+  function setViewInfo(area) {
+    setAreaInfo(area);
     dispatch();
   }
 
@@ -126,9 +144,9 @@ const Login = () => {
           </Animatable.View>
         </View>
       ) : viewInfoArea ? (
-        <InfoArea props={{area: areas.length > 0 ? areas[0] : null}} />
+        <InfoArea props={{ area: areaInfo, comeBackAreas }} />
       ) : (
-        <Areas props={{userLogged, areas, setViewInfo}} />
+        <Areas props={{ userLogged, areas, setViewInfo, logout }} />
       )}
     </>
   );

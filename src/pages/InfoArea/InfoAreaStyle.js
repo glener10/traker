@@ -1,4 +1,4 @@
-import {StyleSheet, StatusBar} from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 
 export const stylesInfoArea = StyleSheet.create({
   container: {
@@ -31,6 +31,7 @@ export const stylesInfoArea = StyleSheet.create({
     paddingBottom: 10,
     borderBottomColor: '#23b5b5',
     borderBottomWidth: 1,
+    fontWeight: 'bold',
   },
   sensorContainer: {
     //marginTop: 20,
@@ -45,5 +46,67 @@ export const stylesInfoArea = StyleSheet.create({
   },
   conteudoScroll: {
     margin: 5,
+    fontSize: 20,
   },
+  tittle: {
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+  conteudoInfo: {
+    marginLeft: 10,
+    fontSize: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+  },
+  conteudoScrollInfo: {
+    margin: 5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+  },
+  conteudoDoencasPragas: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 5,
+    borderRadius: 30,
+    borderColor: 'black',
+  },
+  conteudoDoencasPragasVerde: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'green',
+  },
+  conteudoDoencasPragasAmarelo: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'yellow',
+  },
+  conteudoDoencasPragasVermelho: {
+    width: 'auto',
+    margin: 3,
+    alignItems: 'center',
+    alignContent: 'center',
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderRadius: 30,
+    borderColor: 'red',
+  },
+
+
 });

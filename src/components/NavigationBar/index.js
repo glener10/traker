@@ -1,12 +1,23 @@
 import React from 'react';
-import {Text, View, TouchableOpacity} from 'react-native';
-import {stylesNav} from './NavigationBarStyle';
+import { Text, View, TouchableOpacity } from 'react-native';
+import { stylesNav } from './NavigationBarStyle';
 import Icon from 'react-native-vector-icons/AntDesign';
-import {Avatar, Button, Card, Title, Paragraph} from 'react-native-paper';
+import { Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 
 const NavBar = props => {
+
   function execLogout() {
-    alert('Fazendo logout');
+    //alert('Fazendo logout');
+    if (props.props.tipo == "INFO") {
+      props.props.LOGOUT();
+    }
+    else if (props.props.tipo == "AREAS") {
+      props.props.execLogout();
+    }
+    else {
+      alert('Erro ao retornar');
+    }
+
   }
 
   return (
