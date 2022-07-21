@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
 export const stylesInfoArea = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export const stylesInfoArea = StyleSheet.create({
   },
   imgArea: {
     marginTop: 70,
-    //position: 'relative',
+    position: 'relative',
     width: '100%',
     height: 200,
     //resizeMode: 'contain',
@@ -32,6 +32,7 @@ export const stylesInfoArea = StyleSheet.create({
     borderBottomColor: '#23b5b5',
     borderBottomWidth: 1,
     fontWeight: 'bold',
+    color: 'black',
   },
   sensorContainer: {
     //marginTop: 20,
@@ -47,10 +48,12 @@ export const stylesInfoArea = StyleSheet.create({
   conteudoScroll: {
     margin: 5,
     fontSize: 20,
+    color: 'black',
   },
   tittle: {
     fontWeight: 'bold',
     fontSize: 20,
+    color: 'black',
   },
   conteudoInfo: {
     marginLeft: 10,
@@ -58,6 +61,7 @@ export const stylesInfoArea = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
+    color: 'black',
   },
   conteudoScrollInfo: {
     margin: 5,
@@ -107,6 +111,34 @@ export const stylesInfoArea = StyleSheet.create({
     borderRadius: 30,
     borderColor: 'red',
   },
-
-
+  simboloAlertaVermelho: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'red',
+    marginLeft: 15,
+    marginRight: 10,
+  },
+  simboloAlertaAmarelo: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'yellow',
+    marginLeft: 15,
+    marginRight: 10,
+  },
+  simboloAlertaVerde: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'green',
+    marginLeft: 15,
+    marginRight: 10,
+  },
 });
