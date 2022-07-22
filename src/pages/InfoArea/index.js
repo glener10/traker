@@ -21,25 +21,11 @@ const InfoArea = props => {
       />
       <ScrollView>
         <View style={stylesInfoArea.sensorContainer}>
-          <Text style={stylesInfoArea.h1}>
-            {'Status dos sensores:\n(em tempo real)'}
-          </Text>
           <View style={stylesInfoArea.scroll}>
-            <View style={stylesInfoArea.conteudoDoencasPragasVermelho}>
-              <View style={stylesInfoArea.simboloAlertaVermelho}></View>
               <Text style={stylesInfoArea.conteudoScroll}>
-                Tomar medidas adequadas
+                Sua área esta em perigo!
               </Text>
             </View>
-            <View style={stylesInfoArea.conteudoDoencasPragasAmarelo}>
-              <View style={stylesInfoArea.simboloAlertaAmarelo}></View>
-              <Text style={stylesInfoArea.conteudoScroll}>Ficar em alerta</Text>
-            </View>
-            <View style={stylesInfoArea.conteudoDoencasPragasVerde}>
-              <View style={stylesInfoArea.simboloAlertaVerde}></View>
-              <Text style={stylesInfoArea.conteudoScroll}>Nenhum problema</Text>
-            </View>
-          </View>
         </View>
         <View style={stylesInfoArea.sensorContainer}>
           <Text style={stylesInfoArea.h1}>Pragas</Text>
