@@ -11,7 +11,7 @@ const InfoArea = props => {
       default:
         return 'Sua área está doidona!';
       case 1:
-        return 'Sua área em perfeitas condições!';
+        return 'Sua área está em perfeitas condições!';
       case 2:
         return 'Cuidado, sua área está com possíveis infestações!';
       case 3:

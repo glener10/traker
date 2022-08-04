@@ -30,7 +30,196 @@
       "tamanho": "1.8",
       "largura": "120",
       "comprimento": "150",
-      "culturaAtual": "Teste",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [],
+        "doencas": []
+      }
+    },
+    {
+      "codArea": "2",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [],
+        "doencas": [
+          {
+            "nome": "Ferrugem Asiática",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Mildio",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "3",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Lagarta Falsa-Medideira",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Lagarta Elasmo",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": []
+      }
+    },
+    {
+      "codArea": "4",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Lagarta Falsa-Medideira",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Lagarta Elasmo",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "Ferrugem Asiática",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Mildio",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "5",
+      "nomeArea": "Unipampa2",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Trigo",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Coró do trigo",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Lagarta do cartucho",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "Oídio",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Ferrugem amarela",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "6",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Milho",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Coró do Milho",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Lagarta do cartucho",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Ferrugem Comum",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Ferrugem Polissora",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "7",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Algodão",
       "statusSensor": "ativo",
       "coordenateX": "-29.78952352049523",
       "coordenateY": "-55.76859685519926",
@@ -57,37 +246,95 @@
       }
     },
     {
-      "codArea": "2",
-      "nomeArea": "Unipampa2",
+      "codArea": "8",
+      "nomeArea": "Unipampa",
       "tamanho": "1.8",
       "largura": "120",
       "comprimento": "150",
-      "culturaAtual": "Soja",
+      "culturaAtual": "Cevada",
       "statusSensor": "ativo",
       "coordenateX": "-29.78952352049523",
       "coordenateY": "-55.76859685519926",
       "img": "end/lavoura1",
       "sensor": {
-        "pragas": [
-          {
-            "nome": "Antracnose",
-            "alerta": "3",
-            "dataDeteccao": "10/06/2022"
-          },
-          {
-            "nome": "Bobeira",
-            "alerta": "1",
-            "dataDeteccao": "10/06/2022"
-          }
-        ],
+        "pragas": [],
         "doencas": [
           {
-            "nome": "AEB-305",
-            "alerta": "3",
+            "nome": "Dengue",
+            "alerta": "1",
             "dataDeteccao": "10/06/2022"
           },
           {
-            "nome": "${AquiTemUmNome}",
+            "nome": "NomeQualquer",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Aegis",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "9",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Arroz",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [],
+        "doencas": [
+          {
+            "nome": "Dengue",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "NomeQualquer",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Aegis",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "10",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Feijão",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [],
+        "doencas": [
+          {
+            "nome": "Dengue",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "NomeQualquer",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Aegis",
             "alerta": "2",
             "dataDeteccao": "10/06/2022"
           }
