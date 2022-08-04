@@ -12,7 +12,7 @@ export const stylesInfoArea = StyleSheet.create({
     marginTop: 70,
     position: 'relative',
     width: '100%',
-    height: 200,
+    height: 140,
     //resizeMode: 'contain',
   },
   conteudo: {

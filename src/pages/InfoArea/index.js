@@ -6,8 +6,34 @@ import * as Animatable from 'react-native-animatable';
 import {Button} from 'react-native-paper';
 
 const InfoArea = props => {
+  function messageStatusGeralArea(status) {
+    switch (status) {
+      default:
+        return 'Sua área está doidona!';
+      case 1:
+        return 'Sua área em perfeitas condições!';
+      case 2:
+        return 'Cuidado, sua área está com possíveis infestações!';
+      case 3:
+        return 'Perigo, sua área está infestada!';
+    }
+  }
   function LOGOUT() {
     props.props.comeBackAreas();
+  }
+  function statusGeralArea(props) {
+    let status = 1;
+    props.props.area.sensor.pragas.map((praga, key) => {
+      if (Number(praga.alerta) > status) {
+        status = Number(praga.alerta);
+      }
+    });
+    props.props.area.sensor.doencas.map((doenca, key) => {
+      if (Number(doenca.alerta) > status) {
+        status = Number(doenca.alerta);
+      }
+    });
+    return messageStatusGeralArea(status);
   }
   return (
     <Animatable.View
@@ -22,10 +48,10 @@ const InfoArea = props => {
       <ScrollView>
         <View style={stylesInfoArea.sensorContainer}>
           <View style={stylesInfoArea.scroll}>
-              <Text style={stylesInfoArea.conteudoScroll}>
-                Sua área esta em perigo!
-              </Text>
-            </View>
+            <Text style={stylesInfoArea.conteudoScroll}>
+              {statusGeralArea(props)}
+            </Text>
+          </View>
         </View>
         <View style={stylesInfoArea.sensorContainer}>
           <Text style={stylesInfoArea.h1}>Pragas</Text>
