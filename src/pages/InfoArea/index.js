@@ -1,9 +1,9 @@
-import React, {Fragment} from 'react';
-import {View, Image, Text, ScrollView} from 'react-native';
+import React, { Fragment } from 'react';
+import { View, Image, Text, ScrollView } from 'react-native';
 import NavBar from '../../components/NavigationBar';
-import {stylesInfoArea} from './InfoAreaStyle';
+import { stylesInfoArea } from './InfoAreaStyle';
 import * as Animatable from 'react-native-animatable';
-import {Button} from 'react-native-paper';
+import { Button } from 'react-native-paper';
 
 const InfoArea = props => {
   function messageStatusGeralArea(status) {
@@ -18,9 +18,30 @@ const InfoArea = props => {
         return 'Perigo, sua área está infestada!';
     }
   }
+
+
   function LOGOUT() {
     props.props.comeBackAreas();
   }
+
+  function containOneAlertPragas(props) {
+    props.props.area.sensor.pragas.map((praga, key) => {
+      if (Number(praga.alerta) > 1) {
+        return true;
+      }
+    });
+    return false;
+  }
+
+  function containOneAlertDoencas(props) {
+    props.props.area.sensor.doencas.map((doenca, key) => {
+      if (Number(doenca.alerta) > 1) {
+        return true;
+      }
+    });
+    return false;
+  }
+
   function statusGeralArea(props) {
     let status = 1;
     props.props.area.sensor.pragas.map((praga, key) => {
@@ -40,7 +61,7 @@ const InfoArea = props => {
       style={stylesInfoArea.container}
       animation="fadeInLeft"
       delay={500}>
-      <NavBar props={{props, LOGOUT, tipo: 'INFO'}} />
+      <NavBar props={{ props, LOGOUT, tipo: 'INFO' }} />
       <Image
         source={require('../../assets/lavoura1.jpg')}
         style={stylesInfoArea.imgArea}
@@ -54,7 +75,7 @@ const InfoArea = props => {
           </View>
         </View>
         <View style={stylesInfoArea.sensorContainer}>
-          {props.props.area.sensor.pragas.length > 0 ? (
+          {(props.props.area.sensor.pragas.length > 0 && containOneAlertPragas(props)) ? (
             <>
               <Text style={stylesInfoArea.h1}>Pragas</Text>
               <View style={stylesInfoArea.scroll}>
@@ -67,10 +88,10 @@ const InfoArea = props => {
                           praga.alerta == '1'
                             ? stylesInfoArea.conteudoDoencasPragasVerde
                             : praga.alerta == '2'
-                            ? stylesInfoArea.conteudoDoencasPragasAmarelo
-                            : praga.alerta == '3'
-                            ? stylesInfoArea.conteudoDoencasPragasVermelho
-                            : stylesInfoArea.conteudoDoencas
+                              ? stylesInfoArea.conteudoDoencasPragasAmarelo
+                              : praga.alerta == '3'
+                                ? stylesInfoArea.conteudoDoencasPragasVermelho
+                                : stylesInfoArea.conteudoDoencas
                         }>
                         <View
                           key={key}
@@ -78,10 +99,10 @@ const InfoArea = props => {
                             praga.alerta == '1'
                               ? stylesInfoArea.simboloAlertaVerde
                               : praga.alerta == '2'
-                              ? stylesInfoArea.simboloAlertaAmarelo
-                              : praga.alerta == '3'
-                              ? stylesInfoArea.simboloAlertaVermelho
-                              : stylesInfoArea.conteudoDoencas
+                                ? stylesInfoArea.simboloAlertaAmarelo
+                                : praga.alerta == '3'
+                                  ? stylesInfoArea.simboloAlertaVermelho
+                                  : stylesInfoArea.conteudoDoencas
                           }></View>
                         <Text style={stylesInfoArea.conteudoScroll}>
                           {praga.nome}
@@ -97,7 +118,7 @@ const InfoArea = props => {
           )}
         </View>
         <View style={stylesInfoArea.sensorContainer}>
-          {props.props.area.sensor.doencas.length > 0 ? (
+          {(props.props.area.sensor.doencas.length > 0 && containOneAlertDoencas(props)) ? (
             <>
               <Text style={stylesInfoArea.h1}>Doenças detectadas</Text>
               <View style={stylesInfoArea.scroll}>
@@ -110,10 +131,10 @@ const InfoArea = props => {
                           doenca.alerta == '1'
                             ? stylesInfoArea.conteudoDoencasPragasVerde
                             : doenca.alerta == '2'
-                            ? stylesInfoArea.conteudoDoencasPragasAmarelo
-                            : doenca.alerta == '3'
-                            ? stylesInfoArea.conteudoDoencasPragasVermelho
-                            : stylesInfoArea.conteudoDoencas
+                              ? stylesInfoArea.conteudoDoencasPragasAmarelo
+                              : doenca.alerta == '3'
+                                ? stylesInfoArea.conteudoDoencasPragasVermelho
+                                : stylesInfoArea.conteudoDoencas
                         }>
                         <View
                           key={key}
@@ -121,10 +142,10 @@ const InfoArea = props => {
                             doenca.alerta == '1'
                               ? stylesInfoArea.simboloAlertaVerde
                               : doenca.alerta == '2'
-                              ? stylesInfoArea.simboloAlertaAmarelo
-                              : doenca.alerta == '3'
-                              ? stylesInfoArea.simboloAlertaVermelho
-                              : stylesInfoArea.conteudoDoencas
+                                ? stylesInfoArea.simboloAlertaAmarelo
+                                : doenca.alerta == '3'
+                                  ? stylesInfoArea.simboloAlertaVermelho
+                                  : stylesInfoArea.conteudoDoencas
                           }></View>
 
                         <Text style={stylesInfoArea.conteudoScroll}>
