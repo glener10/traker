@@ -1,13 +1,98 @@
 {
-  "employees": [
+  "users": [
     {
-      "nome": "Glener"
+      "username": "Vinicius",
+      "password": "123456",
+      "codUser": "1",
+      "admin": false,
+      "areas": ["1", "2"]
     },
     {
-      "nome": "Igor"
+      "username": "Super Vinicius",
+      "password": "123456",
+      "codUser": "2",
+      "admin": true,
+      "areas": []
     },
     {
-      "nome": "Vinicius"
+      "username": "a",
+      "password": "a",
+      "codUser": "3",
+      "admin": true,
+      "areas": ["1", "2"]
+    }
+  ],
+
+  "areas": [
+    {
+      "codArea": "1",
+      "nomeArea": "Unipampa",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Teste",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [],
+        "doencas": [
+          {
+            "nome": "Dengue",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "NomeQualquer",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Aegis",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
+    },
+    {
+      "codArea": "2",
+      "nomeArea": "Unipampa2",
+      "tamanho": "1.8",
+      "largura": "120",
+      "comprimento": "150",
+      "culturaAtual": "Soja",
+      "statusSensor": "ativo",
+      "coordenateX": "-29.78952352049523",
+      "coordenateY": "-55.76859685519926",
+      "img": "end/lavoura1",
+      "sensor": {
+        "pragas": [
+          {
+            "nome": "Antracnose",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "Bobeira",
+            "alerta": "1",
+            "dataDeteccao": "10/06/2022"
+          }
+        ],
+        "doencas": [
+          {
+            "nome": "AEB-305",
+            "alerta": "3",
+            "dataDeteccao": "10/06/2022"
+          },
+          {
+            "nome": "${AquiTemUmNome}",
+            "alerta": "2",
+            "dataDeteccao": "10/06/2022"
+          }
+        ]
+      }
     }
   ]
 }

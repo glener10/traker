@@ -1,29 +1,155 @@
-import React, { useEffect, useState } from 'react';
-import { Text } from 'react-native';
-import api from '../../services/api';
+import React from 'react';
+import { View, Image, Button, TextInput, Text } from 'react-native';
+import { stylesLogin } from './loginStyle';
+import * as Animatable from 'react-native-animatable';
+import Areas from '../Areas';
+import useDb from '../../hooks/useDb';
+import InfoArea from '../../pages/InfoArea';
+
+const Login = () => {
+  const [user, setUser] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [logged, setLogged] = React.useState(false);
+  const db = useDb();
+
+  const [areas, setAreas] = React.useState([]);
+  const [userLogged, setUserLogged] = React.useState([]);
+
+  function setViewInfoArea(viewInfoArea, action) {
+    return !viewInfoArea;
+  }
+
+  const [viewInfoArea, dispatch] = React.useReducer(setViewInfoArea, false);
+  const [areaInfo, setAreaInfo] = React.useState([]);
 
 
-function Login() {
-  const [users, setUsers] = useState([]);
-  const ABACATE;
+  function comeBackAreas() {
+    setAreaInfo([]);
+    dispatch();
+  }
 
-  useEffect(() => {
-    async function getUsers() {
-      try {
-        const { data } = await api.get("/employees");
-        console.log(data);
-        setUsers(data);
-      }
-      catch {
-        alert("Erro ao realizar get");
-      }
-    }
-    getUsers();
+
+
+  function logout() {
+    setUser('');
+    setPassword('');
+    setLogged(false);
+    setAreas([]);
+    setUserLogged([]);
+    setAreaInfo([]);
+  }
+
+  function setViewInfo(area) {
+    setAreaInfo(area);
+    dispatch();
+  }
+
+  React.useEffect(() => {
+    setUser('');
+    setPassword('');
+    setLogged(false);
+    setViewInfoArea(false);
   }, []);
 
+  async function getUser() {
+    var control = false;
+    db.users.map((value, index) => {
+      if (value.username == user && value.password == password) {
+        setUserLogged(value);
+        control = true;
+      }
+    });
+    return control;
+  }
+
+  async function getAreas(arrayAreas) {
+    var control = false;
+    db.areas.map((value, index) => {
+      //console.log(value);
+    });
+
+    return control;
+  }
+
+  async function authLogin() {
+    if (!user || !password) {
+      alert('Por favor, insira os dados.');
+    } else {
+      const control = await getUser();
+      if (control) {
+        //TODO: Falta fazer o get de areas
+        const controlAreas = await getAreas(userLogged.areas);
+        setAreas(db.areas);
+        setLogged(true);
+      } else {
+        alert('As credenciais estão incorretas, por favor insira novamente.');
+        setPassword('');
+        setUser('');
+      }
+    }
+  }
+
   return (
-    <Text>Eu sou o login</Text>
+    <>
+      {logged == false ? (
+        <View style={stylesLogin.container}>
+          <Animatable.View animation="fadeInLeft" delay={500}>
+            <Image
+              source={require('../../assets/logo_app.png')}
+              style={stylesLogin.logo}
+            />
+          </Animatable.View>
+
+          <Animatable.View
+            style={stylesLogin.form}
+            animation="fadeIn"
+            delay={2500}>
+            <Text>Login</Text>
+            <TextInput
+              style={stylesLogin.input}
+              placeholder="Insira seu usuário"
+              value={user}
+              type="email"
+              onChangeText={input => setUser(input)}
+            />
+
+            <Text>Senha</Text>
+            <TextInput
+              style={stylesLogin.input}
+              placeholder="Insira sua senha"
+              value={password}
+              type="password"
+              onChangeText={input => setPassword(input)}
+              secureTextEntry={true}
+            />
+          </Animatable.View>
+          <Animatable.View
+            style={stylesLogin.inputButton}
+            animation="fadeIn"
+            delay={2500}>
+            <Button
+              title="Efetuar Login"
+              color="#23b5b5"
+              accessibilityLabel="Botão para efetuar o Login"
+              onPress={async () => await authLogin()}
+            />
+            {
+              //TODO: Por enquanto sem registrar!
+              /* <Button
+          title="Registre-se"
+          color="#156AE9"
+          accessibilityLabel="Botão para efetuar o cadastro de nova conta"
+            /> */
+            }
+          </Animatable.View>
+        </View>
+      ) : viewInfoArea ? (
+        <InfoArea props={{ area: areaInfo, comeBackAreas }} />
+      ) : (
+        <Areas props={{ userLogged, areas, setViewInfo, logout }} />
+      )}
+    </>
   );
-}
+};
 
 export default Login;
