@@ -14,10 +14,10 @@ export const stylesNav = StyleSheet.create({
   },
   imgPerfil: {
     flex: 1,
-    marginLeft: 15,
-    maxHeight: 50,
-    maxWidth: 50,
-    borderRadius: 50,
+    marginRight: 15,
+    maxHeight: 35,
+    maxWidth: 35,
+    backgroundColor: '#23b5b5',
   },
   name: {
     flex: 1,
@@ -34,9 +34,9 @@ export const stylesNav = StyleSheet.create({
   },
   imgLogout: {
     flex: 1,
-    maxHeight: 35,
-    maxWidth: 35,
-    marginRight: 15,
+    maxHeight: 50,
+    maxWidth: 50,
+    marginLeft: 15,
     backgroundColor: '#23b5b5',
     width: 35,
   },
