@@ -1,37 +1,56 @@
-# mobileDevices
+<h1 align="center">TRAKER</h1>
 
-//TODO: <https://www.youtube.com/watch?v=LjJFu6Y6MrU&ab_channel=WillDev> Fazer os route (logado ou não)
+<p align="center"> 🚀Implementation of an application for monitoring pests and diseases in areas, is an application for the purpose of studying react-native carried out in the Mobile Devices discipline.</p>
 
-//TODO: <https://www.youtube.com/watch?v=ErjWNvP6mko&ab_channel=FelipeRocha%E2%80%A2dicasparadevs>
+<img src="/src/assets/readmeimage.png" alt="example"/>
 
-- 38:40 Json fake.
-- 1 hora e 10 Route
-- 1 hora e 30 Json
+Table of Contents
 
-# Para Desenvolvedor ou contribuidor
+===================
 
-- Instalar e configurar ambiente react-native
+<!--ts-->
 
-- Instalar e configurar Prettier
+- [Prerequisites](#Prerequisites)
+- [Demo](#Demo)
 
-# Tutoriais
+<!--te-->
 
-Get do Json-Server
+===================
 
-http://localhost:3000/employees?nome=Glener
 
-Para debuggar e ver console
-http://localhost:8081/debugger-ui/
+# Prerequisites
 
-Caso não dê para rodar scripts
-1- Entrar no powerShell como administrador
-2- Ir até a localidade do projeto
+- [Node](https://nodejs.org/en/)
+
+- [npm](https://www.npmjs.com/)
+
+- [react-native](https://reactnative.dev/)
+
+The app used the following versions:
+
+**Node**: v16.15.0
+
+**npm**: 8.5.5
+
+**react-native-cli**: 2.0.1
+
+**react-native**: 0.68.2
+
+
+# Demo
+
+
+If you can't run scripts
+
+1- Log into PowerShell as an administrator
+
+2- Go to the project location
 
 ```bash
 $ Set-ExecutionPolicy Unrestricted
 ```
 
-Primeira coisa a fazer ao iniciar o projeto
+Execution
 
 ```bash
 $ git clone...
