@@ -12,7 +12,7 @@ const Login = () => {
   const [logged, setLogged] = React.useState(false);
   const db = useDb();
 
-  const [areas, setAreas] = React.useState([]);
+
   const [userLogged, setUserLogged] = React.useState([]);
 
   function setViewInfoArea(viewInfoArea, action) {
@@ -62,24 +62,12 @@ const Login = () => {
     return control;
   }
 
-  async function getAreas(arrayAreas) {
-    var control = false;
-    db.areas.map((value, index) => {
-      //console.log(value);
-    });
-
-    return control;
-  }
-
   async function authLogin() {
     if (!user || !password) {
       alert('Por favor, insira os dados.');
     } else {
       const control = await getUser();
       if (control) {
-        //TODO: Falta fazer o get de areas
-        const controlAreas = await getAreas(userLogged.areas);
-        setAreas(db.areas);
         setLogged(true);
       } else {
         alert('As credenciais estão incorretas, por favor insira novamente.');
@@ -146,7 +134,7 @@ const Login = () => {
       ) : viewInfoArea ? (
         <InfoArea props={{ area: areaInfo, comeBackAreas }} />
       ) : (
-        <Areas props={{ userLogged, areas, setViewInfo, logout }} />
+        <Areas props={{ userLogged, setViewInfo, logout }} />
       )}
     </>
   );

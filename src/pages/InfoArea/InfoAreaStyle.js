@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
 export const stylesInfoArea = StyleSheet.create({
   container: {
@@ -10,9 +10,9 @@ export const stylesInfoArea = StyleSheet.create({
   },
   imgArea: {
     marginTop: 70,
-    //position: 'relative',
+    position: 'relative',
     width: '100%',
-    height: 200,
+    height: 140,
     //resizeMode: 'contain',
   },
   conteudo: {
@@ -26,31 +26,49 @@ export const stylesInfoArea = StyleSheet.create({
     fontFamily: 'Roboto',
     top: 0,
     width: '100%',
-    marginTop: 10,
+    marginTop: 30,
     //resizeMode: 'contain',
     paddingBottom: 10,
     borderBottomColor: '#23b5b5',
-    borderBottomWidth: 1,
+    borderBottomWidth: 2,
     fontWeight: 'bold',
+    color: 'black',
   },
   sensorContainer: {
-    //marginTop: 20,
-    margin: 15,
+    width: '100%',
     borderColor: '#23b5b5',
-    borderWidth: 5,
-    borderRadius: 20,
   },
   scroll: {
     padding: 10,
     margin: 10,
   },
+  scrollGeral: {
+    marginTop: 5,
+    padding: 5,
+    paddingBottom: 10,
+    borderBottomColor: '#23b5b5',
+    borderBottomWidth: 5,
+    width: '100%',
+  },
   conteudoScroll: {
     margin: 5,
     fontSize: 20,
+    color: 'black',
+  },
+  geral: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontFamily: 'Roboto',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+    color: 'black',
+    fontWeight: 'bold',
   },
   tittle: {
     fontWeight: 'bold',
     fontSize: 20,
+    color: 'black',
   },
   conteudoInfo: {
     marginLeft: 10,
@@ -58,6 +76,7 @@ export const stylesInfoArea = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
+    color: 'black',
   },
   conteudoScrollInfo: {
     margin: 5,
@@ -95,7 +114,7 @@ export const stylesInfoArea = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 2,
     borderRadius: 30,
-    borderColor: 'yellow',
+    borderColor: '#dddd46',
   },
   conteudoDoencasPragasVermelho: {
     width: 'auto',
@@ -107,6 +126,34 @@ export const stylesInfoArea = StyleSheet.create({
     borderRadius: 30,
     borderColor: 'red',
   },
-
-
+  simboloAlertaVermelho: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'red',
+    marginLeft: 15,
+    marginRight: 10,
+  },
+  simboloAlertaAmarelo: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: '#dddd46',
+    marginLeft: 15,
+    marginRight: 10,
+  },
+  simboloAlertaVerde: {
+    width: 20,
+    height: 20,
+    alignItems: 'center',
+    alignContent: 'center',
+    borderRadius: 10,
+    backgroundColor: 'green',
+    marginLeft: 15,
+    marginRight: 10,
+  },
 });
