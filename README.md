@@ -53,8 +53,8 @@ $ Set-ExecutionPolicy Unrestricted
 Execution
 
 ```bash
-$ git clone...
-$ git checkout master   (ou release caso não seja versão final)
+$ git clone https://github.com/glener10/Traker-mobileDevices.git
+$ git checkout master   (or release, if dont be the final version)
 $ git pull
 $ npm install
 $ npm run server
